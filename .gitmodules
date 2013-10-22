@@ -22,3 +22,6 @@
 [submodule "chef/cookbooks/phpmyadmin"]
 	path = chef/cookbooks/phpmyadmin
 	url = https://github.com/priestjim/chef-phpmyadmin.git
+[submodule "chef/cookbooks/build-essential"]
+	path = chef/cookbooks/build-essential
+	url = https://github.com/opscode-cookbooks/build-essential.git

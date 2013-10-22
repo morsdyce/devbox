@@ -11,12 +11,16 @@ override_attributes(
 	"php" => {
 		'display_errors' => 'On',
 		'date.timezone' => 'Asia/Jerusalem',
-	}
+	},
+	"build_essential" => {
+    	"compiletime" => true
+  	}
 )
 
 # Run list function we mentioned earlier
 run_list(
     "recipe[apt]",
+	"recipe[build-essential]",
 	"recipe[openssl]",
     "recipe[apache2]",
 	"recipe[apache2::mod_php5]",
@@ -27,8 +31,10 @@ run_list(
     "recipe[php]",
 	"recipe[php::module_mysql]",
 	"recipe[php::fpm]",
+	"recipe[php::module_curl]",
 	"recipe[php::module_gd]",
 	"recipe[php::module_xml]",
 	"recipe[apache2::vhosts]",
-	"recipe[phpmyadmin]"
+	"recipe[phpmyadmin]",
+	"recipe[gems::jekyll]"
 )
