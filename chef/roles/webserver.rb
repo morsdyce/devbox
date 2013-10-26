@@ -34,6 +34,11 @@ run_list(
 	"recipe[php::module_curl]",
 	"recipe[php::module_gd]",
 	"recipe[php::module_xml]",
+	"recipe[php::module_mcrypt]",
+	"recipe[php::module_soap]",
+	"recipe[chef-php-extra::module_dev]",
+	"recipe[chef-php-extra::xdebug]",
+	"recipe[chef-php-extra::module_imagick]",
 	"recipe[apache2::vhosts]",
 	"recipe[phpmyadmin]",
 	"recipe[gems::jekyll]"
